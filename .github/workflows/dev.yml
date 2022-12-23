@@ -1,13 +1,14 @@
-# name: Reusable Workflow Test
-# run-name: Reusable Workflow Test
+name: Reusable Workflow Test
+run-name: Reusable Workflow Test
 
-# on: 
-#   push:
-#     branches:
-#       - dev
+on: 
+  push:
+    branches:
+      - dev
 
-# jobs:
-#   workflow_call:
-#     uses: ./.github/workflows/reusable_workflow.yml
-#     with:
-#       TEST: develop
+jobs:
+  workflow_call:
+    uses: ./.github/workflows/reusable_workflow.yml
+    with:
+      TEST: develop
+      ENV: dev
