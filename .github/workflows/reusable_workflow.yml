@@ -23,7 +23,9 @@ jobs:
 
       - name: 'if test'
         if: ${{ github.ref_name }} != main
-        run: echo 'mainじゃないよ'
+        run: |
+          echo ${{ github.ref_name }}だよ
+          echo 'mainじゃないよ'
 
       - name: 'if test'
         if: ${{ github.ref_name }} == main
