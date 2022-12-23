@@ -22,11 +22,11 @@ jobs:
         run: echo ${{ inputs.TEST }}
 
       - name: 'if test'
-        if: ${{ github.ref_name }} != 'main'
+        if: github.ref_name != 'main'
         run: |
           echo ${{ github.ref_name }}だよ
           echo 'mainじゃないよ'
 
       - name: 'if test'
-        if: ${{ github.ref_name }} == 'main'
+        if: github.ref_name == 'main'
         run: echo 'mainだよ'
