@@ -11,3 +11,5 @@ jobs:
     uses: ./.github/workflows/reusable_workflow.yml
     with:
       TEST: production
+    secrets:
+      INCOMING_WEBHOOK_URL_NOTIFICATION_MG: ${{ secrets.INCOMING_WEBHOOK_URL_NOTIFICATION_MG }}
