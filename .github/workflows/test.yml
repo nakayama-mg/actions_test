@@ -3,8 +3,11 @@ run-name: Reusable Workflow Test
 
 on: push
 
+env:
+  TEST: hogehoge
+
 jobs:
   workflow_call:
     uses: ./.github/workflows/reusable_workflow.yml
     with:
-      TEST: hoge
+      TEST: ${{ env.TEST }}
