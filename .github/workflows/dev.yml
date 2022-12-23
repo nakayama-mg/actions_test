@@ -7,8 +7,7 @@ on:
       - dev
 
 jobs:
-  workflow_call:
+  Deploy:
     uses: ./.github/workflows/reusable_workflow.yml
     with:
       TEST: develop
-      ENV: dev

@@ -6,9 +6,6 @@ on:
       TEST:
         type: string
         required: true
-      ENV:
-        type: string
-        required: true
 
 jobs:
   reusable_workflow_job:
@@ -24,8 +21,8 @@ jobs:
       - name: 'if test'
         if: github.ref_name != 'main'
         run: |
-          echo ${{ github.ref_name }}だよ
           echo 'mainじゃないよ'
+          echo ${{ github.ref_name }}だよ
 
       - name: 'if test'
         if: github.ref_name == 'main'
