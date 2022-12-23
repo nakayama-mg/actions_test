@@ -1,0 +1,13 @@
+# name: Reusable Workflow Test
+# run-name: Reusable Workflow Test
+
+# on: 
+#   push:
+#     branches:
+#       - stg
+
+# jobs:
+#   workflow_call:
+#     uses: ./.github/workflows/reusable_workflow.yml
+#     with:
+#       TEST: staging

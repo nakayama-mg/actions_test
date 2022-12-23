@@ -1,13 +1,13 @@
 name: Reusable Workflow Test
 run-name: Reusable Workflow Test
 
-on: push
-
-env:
-  TEST: hogehoge
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
   workflow_call:
     uses: ./.github/workflows/reusable_workflow.yml
     with:
-      TEST: ${{ env.TEST }}
+      TEST: production
