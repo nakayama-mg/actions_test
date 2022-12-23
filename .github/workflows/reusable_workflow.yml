@@ -1,0 +1,20 @@
+name: Reusable Workflow
+
+on:
+  workflow_call:
+    inputs:
+      TEST:
+        type: string
+        required: true
+
+jobs:
+  reusable_workflow_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+
+      - name: 'echo test'
+        run: echo ${{ inputs.TEST }}
+
