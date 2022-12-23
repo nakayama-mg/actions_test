@@ -6,8 +6,8 @@ on:
       TEST:
         type: string
         required: true
+    secrets:
       INCOMING_WEBHOOK_URL_NOTIFICATION_MG:
-        type: string
         required: true
 
 jobs:
