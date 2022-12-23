@@ -36,7 +36,7 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.INCOMING_WEBHOOK_URL_NOTIFICATION_MG }}
-          SLACK_CHANNEL: pj-smc-radiko-githubactions
+          SLACK_CHANNEL: pj-smc-radiko-90-githubactions
           SLACK_TITLE: ':tada: Success :tada:'
           SLACK_MESSAGE: このメッセージはmain以外にpushされたときに表示される(branchは${{ github.ref_name }})
           SLACK_COLOR: ${{ job.status }}
@@ -46,7 +46,7 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.INCOMING_WEBHOOK_URL_NOTIFICATION_MG }}
-          SLACK_CHANNEL: pj-smc-radiko-githubactions
+          SLACK_CHANNEL: pj-smc-radiko-90-githubactions
           SLACK_TITLE: ':fire: Failure :fire:'
           SLACK_MESSAGE: このメッセージはmain以外にpushされたときに表示される(branchは${{ github.ref_name }})
           SLACK_COLOR: ${{ job.status }}
@@ -56,7 +56,7 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.INCOMING_WEBHOOK_URL_NOTIFICATION_MG }}
-          SLACK_CHANNEL: pj-smc-radiko-githubactions
+          SLACK_CHANNEL: pj-smc-radiko-90-githubactions
           SLACK_TITLE: ':tada: Success :tada:'
           SLACK_MESSAGE: このメッセージはmainにpushされたときに表示される(branchは${{ github.ref_name }})
           SLACK_COLOR: ${{ job.status }}
@@ -66,7 +66,7 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.INCOMING_WEBHOOK_URL_NOTIFICATION_MG }}
-          SLACK_CHANNEL: pj-smc-radiko-githubactions
+          SLACK_CHANNEL: pj-smc-radiko-90-githubactions
           SLACK_TITLE: ':fire: Failure :fire:'
           SLACK_MESSAGE: このメッセージはmainにpushされたときに表示される(branchは${{ github.ref_name }})
           SLACK_COLOR: ${{ job.status }}
