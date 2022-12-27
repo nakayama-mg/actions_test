@@ -32,7 +32,7 @@ jobs:
         run: echo 'mainだよ'
 
       - name: 'Slack Notification on Success'
-        if: success() && (github.ref_name != 'main' || github.ref_name != 'stg')
+        if: success() && (github.ref_name != 'main' && github.ref_name != 'stg')
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.INCOMING_WEBHOOK_URL_NOTIFICATION_MG }}
@@ -42,7 +42,7 @@ jobs:
           SLACK_COLOR: ${{ job.status }}
 
       - name: 'Slack Notification on Failure'
-        if: failure() && (github.ref_name != 'main' || github.ref_name != 'stg')
+        if: failure() && (github.ref_name != 'main' && github.ref_name != 'stg')
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.INCOMING_WEBHOOK_URL_NOTIFICATION_MG }}
