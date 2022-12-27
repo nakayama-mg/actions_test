@@ -21,9 +21,6 @@ jobs:
       - name: 'echo test'
         run: echo ${{ inputs.TEST }}
 
-      - name: 'failure'
-        run: hogehoge
-
       - name: 'if test'
         if: github.ref_name != 'main'
         run: |
