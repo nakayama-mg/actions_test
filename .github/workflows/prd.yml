@@ -13,3 +13,4 @@ jobs:
       TEST: production
     secrets:
       INCOMING_WEBHOOK_URL_NOTIFICATION_MG: ${{ secrets.INCOMING_WEBHOOK_URL_NOTIFICATION_MG }}
+      SAMPLE: ${{ secrets.SAMPLE }}
